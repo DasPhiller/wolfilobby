@@ -9,14 +9,14 @@ version = "1.0"
 
 repositories {
     mavenCentral()
-    maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots")
+    maven { url = uri("https://papermc.io/repo/repository/maven-public/") }
 
 }
 
 dependencies {
     testImplementation(kotlin("test"))
     implementation("net.axay:kspigot:1.17.4")
-    compileOnly("org.spigotmc:spigot-api:1.17-R0.1-SNAPSHOT")
+    compileOnly("io.papermc.paper:paper-api:1.18-R0.1-SNAPSHOT")
 }
 
 tasks.test {
@@ -25,4 +25,7 @@ tasks.test {
 
 tasks.withType<KotlinCompile>() {
     kotlinOptions.jvmTarget = "1.8"
+}
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(17))
 }
