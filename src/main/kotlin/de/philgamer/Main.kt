@@ -1,5 +1,7 @@
 package de.philgamer
 
+import de.philgamer.commands.AdminCommand
+import de.philgamer.guis.AdminGUI
 import de.philgamer.listener.JoinListener
 import de.philgamer.listener.QuitListener
 import net.axay.kspigot.chat.KColors
@@ -12,6 +14,7 @@ class Main : KSpigot() {
         Bukkit.getConsoleSender().sendMessage("${KColors.GREEN}Plugin started")
         pluginManager.registerEvents(JoinListener(), this)
         pluginManager.registerEvents(QuitListener(), this)
+        getCommand("admin")?.setExecutor(AdminCommand())
     }
 
     override fun shutdown() {
