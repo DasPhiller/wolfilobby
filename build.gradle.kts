@@ -16,7 +16,7 @@ repositories {
 dependencies {
     testImplementation(kotlin("test"))
     implementation("net.axay:kspigot:1.17.4")
-    compileOnly("io.papermc.paper:paper-api:1.18-R0.1-SNAPSHOT")
+    compileOnly("io.papermc.paper:paper-api:1.17.1-R0.1-SNAPSHOT")
 }
 
 tasks.test {
@@ -25,7 +25,4 @@ tasks.test {
 
 tasks.withType<KotlinCompile>() {
     kotlinOptions.jvmTarget = "1.8"
-}
-java {
-    toolchain.languageVersion.set(JavaLanguageVersion.of(17))
 }
