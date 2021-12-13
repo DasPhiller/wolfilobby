@@ -1,6 +1,7 @@
 package de.philgamer
 
 import de.philgamer.commands.AdminCommand
+import de.philgamer.commands.KickCommand
 import de.philgamer.guis.AdminGUI
 import de.philgamer.listener.JoinListener
 import de.philgamer.listener.QuitListener
@@ -15,6 +16,7 @@ class Main : KSpigot() {
         pluginManager.registerEvents(JoinListener(), this)
         pluginManager.registerEvents(QuitListener(), this)
         getCommand("admin")?.setExecutor(AdminCommand())
+        getCommand("kick")?.setExecutor(KickCommand())
     }
 
     override fun shutdown() {

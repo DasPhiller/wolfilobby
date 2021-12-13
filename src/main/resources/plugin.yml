@@ -1,4 +1,4 @@
-name: Smp
+name: wolfilobby
 main: de.philgamer.Main
 version: 1.0
 api-version: 1.17
@@ -6,3 +6,5 @@ libraries:
   - "net.axay:kspigot:1.17.4"
 commands:
   admin:
+
+  kick:

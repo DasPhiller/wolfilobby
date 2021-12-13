@@ -14,7 +14,7 @@ class AdminCommand : CommandExecutor {
         }
         val player:Player = sender
         if(player.isOp) {
-            player.openGUI(AdminGUI().gui, page = 0)
+            player.openGUI(AdminGUI().gui, page = 0, )
         }
         return true
     }
